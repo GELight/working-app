@@ -1,0 +1,117 @@
+
+//
+// MIXINS
+
+
+//
+// Transitions
+@mixin transition($t: all, $s: 0.4s, $a: ease-in-out) {
+	-webkit-transition: $t $s $a;
+	-moz-transition: $t $s $a;
+	-o-transition: $t $s $a;
+	transition: $t $s $a;
+}
+
+
+//
+// Round Corners
+
+@mixin round-corner-topLeft($r: $round-border-radius-default) {
+	-moz-border-radius-topleft: $r;
+	-webkit-border-top-left-radius: $r;
+	border-top-left-radius: $r;
+}
+@mixin round-corner-topRight($r: $round-border-radius-default) {
+	-moz-border-radius-topright: $r;
+	-webkit-border-top-right-radius: $r;
+	border-top-right-radius: $r;
+}
+@mixin round-corner-bottomLeft($r: $round-border-radius-default) {
+	-moz-border-radius-bottomleft: $r;
+	-webkit-border-bottom-left-radius: $r;
+	border-bottom-left-radius: $r;
+}
+@mixin round-corner-bottomRight($r: $round-border-radius-default) {
+	-moz-border-radius-bottomright: $r;
+	-webkit-border-bottom-right-radius: $r;
+	border-bottom-right-radius: $r;
+}
+@mixin round-corner-left($r: $round-border-radius-default) {
+	@include round-corner-topLeft($r);
+	@include round-corner-bottomLeft($r);
+}
+@mixin round-corner-right($r: $round-border-radius-default) {
+	@include round-corner-topRight($r);
+	@include round-corner-bottomRight($r);
+}
+@mixin round-corner-top($r: $round-border-radius-default) {
+	@include round-corner-topLeft($r);
+	@include round-corner-topRight($r);
+}
+@mixin round-corner-bottom($r: $round-border-radius-default) {
+	@include round-corner-bottomLeft($r);
+	@include round-corner-bottomRight($r);
+}
+@mixin round-corner-all($r: $round-border-radius-default) {
+	@include round-corner-top($r);
+	@include round-corner-bottom($r);
+}
+
+
+//
+// Borders
+
+@mixin border-top($color: $border-color-default, $style: $border-style-default, $w: $border-width-default) {
+	border-top: $w $style $color;
+}
+@mixin border-right($color: $border-color-default, $style: $border-style-default, $w: $border-width-default) {
+	border-right: $w $style $color;
+}
+@mixin border-bottom($color: $border-color-default, $style: $border-style-default, $w: $border-width-default) {
+	border-bottom: $w $style $color;
+}
+@mixin border-left($color: $border-color-default, $style: $border-style-default, $w: $border-width-default) {
+	border-left: $w $style $color;
+}
+@mixin border-all($color: $border-color-default, $style: $border-style-default, $w: $border-width-default) {
+	@include border-top($color, $style, $w);
+	@include border-right($color, $style, $w);
+	@include border-bottom($color, $style, $w);
+	@include border-left($color, $style, $w);
+}
+@mixin border-transparent($w: $border-width-default) {
+	border: $w solid transparent;
+}
+
+
+//
+// Shadow
+
+@mixin shadow($l: $shadow-pos-left, $t: $shadow-pos-top, $s: $shadow-size, $w: $shadow-weight, $c: $shadow-color-default) {
+	-webkit-box-shadow: $l $t $s $w $c;
+	box-shadow: $l $t $s $w $c;
+	-moz-box-shadow: $l $t $s $w $c;
+}
+
+@mixin innerShadow($l: $shadow-pos-left, $t: $shadow-pos-top, $s: $shadow-size, $c: $shadow-color-default) {
+	-webkit-box-shadow: inset $l $t $s $c;
+	box-shadow: inset  $l $t $s $c;
+	-moz-box-shadow: inset $l $t $s $c;
+}
+
+
+//
+// Opacity
+
+@mixin opacity($o) {
+	-moz-opacity: $o;
+	opacity: $o;
+}
+
+
+//
+// Text
+
+@mixin text($c: $text-color-default) {
+	color: $c;
+}

@@ -1,7 +1,8 @@
 
 //
-// VARIABLES
-
+// Bootstrap Variables
+$enable-flex: true;
+$body-bg: #747B81;
 
 //
 // Color Offsets
@@ -12,7 +13,7 @@ $color-offset-default: 15%;
 //
 // Base Colors
 
-$base-color: #747B81;
+$base-color: $body-bg;
 
 $color-default:	  $base-color;      // Default
 

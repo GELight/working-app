@@ -13,15 +13,6 @@
 @import "ish/mixins";
 @import "ish/layout";
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  position: relative;
-  min-width: 100%;
-  min-height: 100%;
-}
-
-body {
-  background: $body-bg;
-}
+// Application
+@import "app/global";
+@import "app/header";

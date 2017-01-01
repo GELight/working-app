@@ -1,8 +1,11 @@
 
 //
-// Bootstrap Variables
+// Customized Bootstrap Variables
 $enable-flex: true;
-$body-bg: #747B81;
+$brand-primary: #00bce2;
+$body-bg: $brand-primary;
+
+
 
 //
 // Color Offsets
@@ -13,7 +16,7 @@ $color-offset-default: 15%;
 //
 // Base Colors
 
-$base-color: $body-bg;
+$base-color: $brand-primary;
 
 $color-default:	  $base-color;      // Default
 
@@ -38,7 +41,7 @@ $text-fontFamily: "ProximaNovaLight","Helvetica Neue",Helvetica,Arial,sans-serif
 $text-fontSize-default: 1.0rem;
 $text-lineHeight-default: 1rem;
 
-$text-color-default:  darken($color-default, ($color-offset-default * 6));
+$text-color-default:  lighten($color-default, 100%);
 
 $text-color-primary:  darken($color-primary, 0%);
 $text-color-info:     darken($color-info, 50%);
@@ -59,7 +62,7 @@ $round-border-radius-default: 3px;
 //
 // Spaces
 
-$space-default: floor(2em);
+$space-default: floor(1em);
 
 
 //

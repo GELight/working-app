@@ -5,6 +5,7 @@
 .header {
   padding: $space-default;
   color: $text-color-default;
+  background: darken($base-color, $color-offset-default);
 
   a {
     color: $text-color-default;

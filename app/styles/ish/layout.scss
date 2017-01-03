@@ -244,60 +244,32 @@
 
 
 //
-// Fixed Layout
+// Debugging
+.ish-layout-debug {
 
-.ember-application {
+	$debug-space: .2em;
+	$debug-opacity: .8;
+	$debug-border: 1px dashed black;
 
-	> .ember-view {
-		position: fixed;
-		top: 0;
-		right: 0;
-		bottom: 0;
-		left: 0;
-	}
-
-}
-
-[class^="ish-layout"] {
-	position: relative;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	left: 0;
+	margin: $debug-space;
+	border: $debug-border;
+	@include opacity($debug-opacity);
 
 	> * {
-		@include flex-grow(1);
+		margin: $debug-space;
+		border: $debug-border;
+		@include opacity($debug-opacity);
 	}
-}
 
-
-//
-// Debugging
-[class^="ish-layout-debug"] {
-	background: rgba(233, 163, 30, 0.68);
-	padding: .2em;
-	@include opacity(.9);
-
-  *[class^="ish-layout"] {
-		background: rgba(233, 163, 30, 0.68);
-		padding: .2em;
-		@include opacity(.9);
+  .ish-layout {
+		margin: $debug-space;
+		border: $debug-border;
+		@include opacity($debug-opacity);
 
 		> * {
-			margin: .2em;
-			padding: .2em;
+			margin: $debug-space;
+			@include opacity($debug-opacity);
 		}
-
-    *[class^="ish-layout"] {
-			background: rgba(233, 163, 30, 0.68);
-			@include opacity(.9);
-
-			*[class^="ish-layout"] {
-				background: rgba(233, 163, 30, 0.68);
-				@include opacity(.9);
-			}
-
-    }
 
   }
 

@@ -1,0 +1,10 @@
+
+<nav class="nav">
+  {{#each servers as |server|}}
+    <a href="#">
+      {{fa-icon "server"}}{{server.title}}
+    </a>
+  {{/each}}
+</nav>
+
+{{yield}}

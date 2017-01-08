@@ -6,6 +6,7 @@
     "hammer.js": "^2.0.8",
     "matchMedia": "0.2.0",
     "bootstrap": "~v4.0.0-alpha.2",
-    "urijs": "^1.18.4"
+    "urijs": "^1.18.4",
+    "font-awesome": "~4.5.0"
   }
 }

@@ -1,30 +1,23 @@
 
 <div class="ish-layout ish-layout-direction-column ish-layout-align-items-stretch">
 
-  <div>
-    <header class="header">
-      <a href="/">{{t "application.title"}}</a>
-    </header>
-  </div>
+  <header class="header">
+    <a href="/">{{t "application.title"}}</a>
+  </header>
 
-  <div class="ish-layout ish-layout-direction-row application-content">
+  <div class="ish-layout ish-layout-direction-row ish-layout-align-items-stretch application-content">
 
-    {{#paper-button class="ish-layout-align-self-stretch"}}Button 1{{/paper-button}}
-    {{#paper-button class="ish-layout-align-self-stretch"}}Button 2{{/paper-button}}
-
-    <div>
-      {{#paper-button}}Button 3{{/paper-button}}
-      {{#paper-button}}Button 4{{/paper-button}}
-      {{#paper-button}}Button 5{{/paper-button}}
+    {{nav-sidebar servers=model.servers}}
+    
+    <div class="navigation-outlet">
+      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
       {{outlet}}
     </div>
 
   </div>
 
-  <div>
-    <footer class="footer">
-      Initialize ...
-    </footer>
-  </div>
-  
+  <footer class="footer">
+    Initialize ...
+  </footer>
+
 </div>

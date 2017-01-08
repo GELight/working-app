@@ -1,0 +1,28 @@
+
+//
+// Nav
+
+.nav {
+  @include flex-grow(0);
+  background: lighten($body-bg, $color-offset-default);
+  padding: $space-default $space-default * 2;
+
+  a {
+    color: $text-color-default;
+    white-space: nowrap;
+
+    &:hover {
+      text-decoration: none;
+    }
+
+    .fa {
+      margin: 0 $space-default 0 0;
+    }
+
+  }
+}
+
+.navigation-outlet {
+  @include flex-grow(1);
+  padding: $space-default $space-default * 2;
+}

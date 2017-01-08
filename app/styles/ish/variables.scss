@@ -10,7 +10,7 @@ $body-bg: $brand-primary;
 //
 // Color Offsets
 
-$color-offset-default: 15%;
+$color-offset-default: 5%;
 
 
 //
@@ -54,7 +54,7 @@ $text-color-danger:   darken($color-danger, 50%);
 // Borders
 
 $border-width-default: 1px;
-$border-color-default: darken($layout-color-default, $color-offset-default / 2);
+$border-color-default: lighten($layout-color-default, $color-offset-default / 2);
 $border-style-default: solid;
 $round-border-radius-default: 3px;
 

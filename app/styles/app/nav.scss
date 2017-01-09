@@ -7,7 +7,7 @@
 
   @include flex-grow(0);
   padding: $space-default * 2;
-
+  
   a {
     color: $text-color-default;
     white-space: nowrap;
@@ -15,7 +15,7 @@
     padding: $space-default * 2;
     //border: $border-width-default $border-style-default lighten($nav-background, $color-offset-default * 3);
     border: $border-width-default $border-style-default transparent;
-    
+
     & ~ a {
       margin-top: $space-default * 2;
     }

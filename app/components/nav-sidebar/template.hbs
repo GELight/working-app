@@ -2,7 +2,7 @@
 <nav class="nav">
   {{#each servers as |server|}}
     <a {{action (route-action 'selectServer' server)}}>
-      {{fa-icon "server"}}{{server.title}}
+      {{fa-icon "server"}}{{server.id}}
     </a>
   {{/each}}
 </nav>

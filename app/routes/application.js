@@ -9,10 +9,10 @@ export default Ember.Route.extend({
 
       "servers": [
         {
-          "title": "Trunk"
+          "id": "trunk"
         },
         {
-          "title": "7.9"
+          "id": "7.9"
         }
       ]
 
@@ -21,10 +21,18 @@ export default Ember.Route.extend({
 
   actions: {
 
-    selectServer: function(server) {
+    lastAction: function(action) {
       this
         .controllerFor('application')
-        .set('lastAction', this.get('i18n').t('application.lastactions.selectedserver', { title: server.title }));
+        .set('lastAction', action);
+    },
+
+    selectServer: function(server) {
+      this.send('lastAction',
+        this.get('i18n').t('application.lastactions.selectedserver', { title: server.id })
+      );
+
+      this.transitionTo('servers', server);
     }
 
   }

@@ -1,7 +1,7 @@
 
 <nav class="nav">
   {{#each servers as |server|}}
-    <a href="#">
+    <a {{action (route-action 'selectServer' server)}}>
       {{fa-icon "server"}}{{server.title}}
     </a>
   {{/each}}

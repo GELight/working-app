@@ -9,13 +9,16 @@
     {{nav-sidebar servers=model.servers}}
 
     <div class="navigation-outlet">
+
+      {{websocket-test}}
+
       {{outlet}}
     </div>
 
   </div>
 
   <footer class="footer">
-    {{lastAction}}
+    <small>{{lastAction}}</small>
   </footer>
 
 </div>

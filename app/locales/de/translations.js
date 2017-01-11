@@ -1,6 +1,14 @@
 export default {
-  'application.title': 'Arbeitstool',
-  'application.lastactions': {
-    'selectedserver': "Server '{{title}}' wurde ausgewählt."
+  'application': {
+    'title': 'Arbeitstool',
+    'lastactions': {
+      'selectedserver': "Server '{{title}}' wurde ausgewählt."
+    }
+  },
+  'websockets': {
+    'connection': {
+      'opened': 'Socketverbindung offen.',
+      'closed': 'Socketverbindung geschlossen.'
+    }
   }
 };

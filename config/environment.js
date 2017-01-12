@@ -48,11 +48,13 @@ module.exports = function(environment) {
 
   ENV.contentSecurityPolicy = {
     'default-src': "'none'",
-    'script-src': "'self' 'unsafe-inline'",
-    'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
+    'script-src': "'self' 'unsafe-inline' 'unsafe-eval'",
     'font-src': "'self' fonts.gstatic.com",
-    'connect-src': "'self'",
+    'style-src': "'self' 'unsafe-inline' https://fonts.googleapis.com",
+    'connect-src': "'self' ws://localhost:7000 localhost:7000",
     'img-src': "'self' data:",
+    'report-uri':"'localhost'",
+    'frame-src': "'none'",
     'media-src': "'self'"
   };
 

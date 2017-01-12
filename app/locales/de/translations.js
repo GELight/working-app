@@ -8,7 +8,8 @@ export default {
   'websockets': {
     'connection': {
       'opened': 'Socketverbindung offen.',
-      'closed': 'Socketverbindung geschlossen.'
+      'closed': 'Socketverbindung geschlossen.',
+      'reconnectOnClose': 'Socketverbindung wiederhergestellt.'
     }
   }
 };

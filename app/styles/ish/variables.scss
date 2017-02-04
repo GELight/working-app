@@ -38,7 +38,7 @@ $layout-color-default: $color-default;
 // Text
 
 $text-fontFamily: "ProximaNovaLight","Helvetica Neue",Helvetica,Arial,sans-serif;
-$text-fontSize-default: 1.0rem;
+$text-fontSize-default: 0.9rem;
 $text-lineHeight-default: 1rem;
 
 $text-color-default:  lighten($color-default, 100%);
@@ -73,7 +73,7 @@ $transition-time-default: .2s;
 //
 // Shadow
 
-$shadow-color-default: rgba(0, 0, 0, .4);
+$shadow-color-default: rgba(0, 0, 0, .9);
 $shadow-size: $space-default;
 $shadow-pos-left: 0px;
 $shadow-pos-top: 0px;

@@ -8,7 +8,7 @@ let wss = new WebSocketServer({ port: port });
 wss.on('connection', function connection(ws) {
 
   ws.on('message', function incoming(message) {
-    console.log('%s', message);
+    console.log(message.data);
   });
-  
+
 });

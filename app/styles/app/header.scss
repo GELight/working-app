@@ -5,9 +5,9 @@
 .header {
   padding: $space-default $space-default * 2;
   color: $text-color-default;
-  border-bottom: $border-width-default $border-style-default $border-color-default;
+  border-bottom: $border-width-default $border-style-default darken($border-color-default, $color-offset-default);
   font-size: 1.2em;
-  background: darken($base-color, $color-offset-default);
+  background: lighten($base-color, $color-offset-default);
 
   a {
     color: $text-color-default;

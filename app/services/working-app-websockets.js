@@ -23,6 +23,10 @@ export default Ember.Service.extend({
     this.set('socketReference', socket);
   },
 
+  getSocket() {
+    return this.get('socketReference');
+  },
+
   destroy() {
     const socket = this.get('websocketsService');
 
@@ -33,6 +37,14 @@ export default Ember.Service.extend({
   send() {
     if (this.get('socketReference')) {
       this.get('socketReference').send(...arguments);
+    }else{
+      console.log( this.get('i18n').t('websockets.connection.closed') );
+    }
+  },
+
+  emit() {
+    if (this.get('socketReference')) {
+      this.get('socketReference').emit(...arguments);
     }else{
       console.log( this.get('i18n').t('websockets.connection.closed') );
     }
